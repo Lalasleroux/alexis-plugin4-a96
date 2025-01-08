@@ -6,6 +6,30 @@
     <title>Affaires d'Alexis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .card-img-bottom {
+            width: 100%;
+            height: 300px;  /* hauteur fixe */
+            object-fit: contain;  /* conserve les proportions */
+            background-color: #f8f9fa; /* fond clair pour les images */
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover {
+            border-color: #0d6efd;
+        }
+
+        .product-images {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -27,75 +51,30 @@
 
     <div class="container mt-5">
         <header class="text-center mb-5">
-            <h1>Bienvenue sur Notre Site de Meubles</h1>
-            <p class="lead">Découvrez ma collection de meubles à donner ou à vendre</p>
+            <h1>À donner ou à vendre</h1>
         </header>
 
         <section id="produits" class="mb-5">
-            <h2 class="text-center mb-4">Nos Articles</h2>
             <div class="row g-4">
-                <!-- Meuble à chaussure -->
+
+                <!-- Table basse -->                      
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <div class="product-images">
-                            <img id="mainImage-chaussure" src="assets/images/produits/meuble-chaussure/photo1.jpg" class="card-img-top mb-2" alt="Meuble à chaussure">
-                            <div class="thumbnail-container d-flex gap-2 justify-content-center">
-                                <img src="assets/images/produits/meuble-chaussure/photo1.jpg" class="thumbnail" onclick="changeImage('mainImage-chaussure', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
-                                <img src="assets/images/produits/meuble-chaussure/photo2.jpg" class="thumbnail" onclick="changeImage('mainImage-chaussure', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
-                            </div>
-                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Meuble à chaussure</h5>
-                            <ul class="list-unstyled">
-                                <li><strong>Dimensions:</strong> À préciser</li>
-                                <li><strong>État:</strong> À préciser</li>
-                                <li><strong>Prix:</strong> À préciser</li>
-                            </ul>
+                          <h5 class="card-title">Table basse</h5>
                         </div>
-                    </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Dimensions:</strong> 90x55 cm</li>
+                            <li class="list-group-item"><strong>État:</strong> Quelques rayure</li>
+                            <li class="list-group-item"><strong>Lien:</strong> <a href="https://www.ikea.com/ch/fr/p/lack-table-basse-brun-noir-40104294/" target=”_blank”>Ikea</a></li>
+                        </ul>
+                        <img id="mainImage-chaussure" src="src/assets/images/produits/table-basse/table-basse-01.jpg" class="card-img-bottom mb-2" alt="Meuble à chaussure">
+                        <div class="thumbnail-container d-flex gap-2 justify-content-center">
+                            <img src="src/assets/images/produits/table-basse/table-basse-01.jpg" class="thumbnail" onclick="changeImage('mainImage-chaussure', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
+                            <img src="src/assets/images/produits/table-basse/table-basse-02.jpg" class="thumbnail" onclick="changeImage('mainImage-chaussure', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
+                        </div>
+                      </div>
                 </div>
-
-                <!-- Table de nuit -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="product-images">
-                            <img id="mainImage-table-nuit" src="assets/images/produits/table-nuit/photo1.jpg" class="card-img-top mb-2" alt="Table de nuit">
-                            <div class="thumbnail-container d-flex gap-2 justify-content-center">
-                                <img src="assets/images/produits/table-nuit/photo1.jpg" class="thumbnail" onclick="changeImage('mainImage-table-nuit', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Table de nuit</h5>
-                            <ul class="list-unstyled">
-                                <li><strong>Dimensions:</strong> À préciser</li>
-                                <li><strong>État:</strong> À préciser</li>
-                                <li><strong>Prix:</strong> À préciser</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Armoire -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="product-images">
-                            <img id="mainImage-armoire" src="assets/images/produits/armoire/photo1.jpg" class="card-img-top mb-2" alt="Armoire">
-                            <div class="thumbnail-container d-flex gap-2 justify-content-center">
-                                <img src="assets/images/produits/armoire/photo1.jpg" class="thumbnail" onclick="changeImage('mainImage-armoire', this.src)" style="width: 60px; height: 60px; object-fit: cover; cursor: pointer;">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Armoire</h5>
-                            <ul class="list-unstyled">
-                                <li><strong>Dimensions:</strong> À préciser</li>
-                                <li><strong>État:</strong> À préciser</li>
-                                <li><strong>Prix:</strong> À préciser</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Continuer avec les autres produits de la même façon -->
             </div>
         </section>
 
@@ -103,7 +82,7 @@
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-0">&copy; 2023 Tous droits réservés.</p>
+            <p class="mb-0">&copy; 2025 Tous droits réservés.</p>
         </div>
     </footer>
 
